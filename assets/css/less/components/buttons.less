@@ -1,4 +1,28 @@
 //out: false 
 
+.btn__gray {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 50px;
+    background-color: #383A36;
+    transition: all linear .15s;
+    padding: 25px 50px;
 
+    &:hover {
+        color: #383A36;
+        background-color: #FFF;
+        box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 22px;
+    }
+}
 

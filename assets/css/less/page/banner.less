@@ -1,2 +1,62 @@
 //out: false
 
+.page__banner {
+    background-image: url('../img/bg-header.svg'), url('../img/banner-mobile.png');
+    background-repeat: no-repeat;
+    background-position: top 0 right -40px, bottom 0 left 0;
+    background-size: 174px, 100%;
+    padding-top: 163px;
+    padding-bottom: 268px;
+
+    .wrapper {
+        max-width: 1224px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 110%;
+            margin-bottom: 8px;
+
+            span {
+                color: #5DA042
+            }
+        }
+
+        .description {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 125%;
+            width: 260px;
+
+            span {
+                color: #5DA042;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        background-image: url('../img/banner.png');
+        background-repeat: no-repeat;
+        background-position: top 0 right 0;
+        background-size: 847px;
+        padding-top: 257px;
+        padding-bottom: 188px;
+
+        .wrapper {
+            .title {
+                font-size: 52px;
+                line-height: 126%;
+                width: 569px;
+                margin-bottom: 16px;
+            }
+            .description {
+               font-size: 32px;
+               width: 483px; 
+            }
+        }
+    }
+}

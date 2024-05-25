@@ -1,2 +1,52 @@
 //out: false
 
+.page__cta {
+    background-image: url('../img/bg-cta.png'), linear-gradient(130deg, #68A84E 34%, #7DC95E 100%);
+    background-repeat: no-repeat;
+    background-position: bottom 0 right 0;
+    background-size: 150px, 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+
+    .wrapper {
+        max-width: 1224px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .title {
+            text-align: center;
+            color: #FFF;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 110%;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        background-size: 270px, 100%;
+        padding-top: 68px;
+        padding-bottom: 55px;
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .title {
+               font-size: 42px;
+               line-height: 128%;
+               width: 652px;
+               text-align: left;
+               margin-bottom: 0; 
+            }
+
+            .btn__cta {
+                max-width: 365px;
+            }
+        }
+    }
+}

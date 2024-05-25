@@ -1,2 +1,156 @@
 //out: false
 
+.page__header {
+    position: absolute;
+    z-index: 3000;
+    padding-top: 23px;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .wrapper {
+        max-width: 1224px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .logo { 
+
+            a {
+                width: 145px;
+
+                img {
+                    width: 100%;
+                }
+            }       
+        }
+
+        .is--desktop {
+            display: none;
+        }
+
+        .is--mobile {
+            flex-grow: 0;
+            
+            .navbar__hamburguer {
+                display: flex;
+                justify-content: flex-end;
+                width: fit-content;            
+            }
+
+            .navbar__overlay {
+                background-color: #5DA042; 
+                z-index: 3001;
+                display: none;
+                .animation__fade_in_right();
+            
+                &.open {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    width: 100%;
+                    position: fixed;                                
+                    top: 0;
+                    right: 0;                
+                    overflow: hidden !important;
+                    transition: all linear 0.5s;
+            
+                    .overlay__content {                    
+                        overflow-y: auto !important;
+                        height: 90%;
+
+                        .overlay__header {
+                            margin: 30px 30px 109px 30px; 
+
+                            .overlay__logo {
+                                width: 130px;
+                            }
+                        }
+
+                        .overlay__menu {
+                            margin: 0;
+                            
+                            .overlay__links {
+                                gap: 10px;
+                                
+                                a {
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    text-align: center;                             
+                                    color: #383A36;
+                                    text-decoration: none;
+                                    text-transform: uppercase;
+
+                                    &.highlight {
+                                        text-decoration: underline;
+                                        color: white;
+                                    }
+                                }
+                            }
+
+                            .overlay__social {
+                                display: flex;
+                                gap: 20px;
+                                align-items: center;
+                                margin-top: 80px;                               
+                            }
+                        }
+                    }
+                } 
+            }
+        }  
+    }  
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 15px;
+
+        .wrapper {
+            
+            .logo {
+                margin-left: 0;
+
+                a {
+                    width: 258px;
+                }
+            }
+
+            .is--desktop {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                .links {
+                    display: flex;
+                    gap: 50px;
+
+                    a {
+                        font-size: 16px;
+                        font-weight: 600;
+                        transition: all linear .15s;
+                        text-transform: uppercase; 
+                        color: #383A36;
+
+                        &.highlight {
+                            text-decoration: underline;
+                            color: white;
+                        }             
+
+                        &:hover {                            
+                            cursor: pointer;  
+                            text-decoration: underline; 
+                            
+                            &.highlight {
+                                color: #383A36;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .is--mobile {
+                display: none;
+            }
+        }
+    }
+}
