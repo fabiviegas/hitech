@@ -1,0 +1,229 @@
+//out: false
+
+.page__franquias {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url('../img/bg-franquias.png');
+    background-repeat: no-repeat;
+    background-position: center top 430px;
+
+    .wrapper {
+        max-width: 1024px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .heading {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 534px;
+            margin-bottom: 35px;
+
+            .title {
+                font-size: 18px;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                margin-bottom: 5px;
+            }
+
+            .subtitle {
+                font-size: 38px;
+                font-weight: 700;
+                margin-bottom: 5px;
+
+                span {
+                    color: #5DA042;
+                }
+            }
+
+            .description {
+               font-size: 18px;
+               font-weight: 500;
+               line-height: 25px; 
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 45px;
+
+            .col--1,
+            .col--2 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .title__topics {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #5DA042;
+                }
+
+                .text {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+
+                    li {
+                        list-style-type: circle;
+                        margin-left: 20px;
+                    }
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+
+                .cover {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    border-top-left-radius: 60px;
+                    border-bottom-right-radius: 60px;
+                    max-width: 455px;
+                    max-height: 433px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .arrow__curve {
+                display: none;
+            }
+        }       
+    }
+
+    .wrapper--2 {
+        max-width: 1224px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .title__infos {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            color: #383A36;
+            margin-bottom: 40px;
+        }
+
+        .info__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                text-align: center;
+
+                .icon__franquias {
+                    width: fit-content;
+                }
+
+                .info__title {
+                    font-size: 22px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                }
+
+                .number {
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    color: #5DA042;
+                }
+
+                .info__detail {
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 100px;
+        padding-bottom: 80px;
+
+        .wrapper {
+            .heading {
+                margin-bottom: 50px;
+                
+                .subtitle {
+                    font-size: 42px;
+                }
+                .description {
+                   font-size: 20px;
+                   line-height: 30px; 
+                }
+            }
+
+            .content {
+                display: grid;
+                grid-template-areas: 
+                    "col2 col1"
+                    "button col1";
+                column-gap: 70px;
+                grid-template-rows: auto 60px;                
+                position: relative;
+                margin-bottom: 80px;
+
+                .col--1 {
+                    grid-area: col1;
+                }
+
+                .col--2 {
+                    grid-area: col2;
+                }
+
+                .btn__franquias {
+                    grid-area: button;
+                }
+
+                .col--1,
+                .col--2 {
+                    .title__topics {
+                        font-size: 22px;
+                    }
+                    .text {
+                        font-size: 18px;
+                        text-align: justify;
+                    }
+                }
+
+                .arrow__curve {
+                    display: block;
+                    position: absolute;
+                    width: fit-content;
+                    left: 265px;
+                    bottom: 90px;
+                }
+            }
+        }
+
+        .wrapper--2 {
+            .title__infos {
+                font-size: 42px;
+                margin-bottom: 60px;
+            }
+
+            .info__content {
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 60px;
+            }
+        }
+    }
+}
